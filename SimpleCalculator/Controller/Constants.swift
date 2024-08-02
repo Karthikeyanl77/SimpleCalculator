@@ -6,3 +6,12 @@
 //
 
 import Foundation
+
+struct K {
+    
+  static let addition = "+"
+  static let subtraction = "-"
+  static let multiplication = "x"
+  static let division = "/"
+
+}

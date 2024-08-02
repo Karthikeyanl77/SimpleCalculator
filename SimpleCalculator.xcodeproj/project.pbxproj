@@ -13,6 +13,7 @@
 		1643CE2F2C5C985800DE86D0 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 1643CE2E2C5C985800DE86D0 /* Base */; };
 		1643CE312C5C985800DE86D0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1643CE302C5C985800DE86D0 /* Assets.xcassets */; };
 		1643CE342C5C985800DE86D0 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 1643CE332C5C985800DE86D0 /* Base */; };
+		1643CE3E2C5CF50C00DE86D0 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1643CE3D2C5CF50C00DE86D0 /* Constants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		1643CE302C5C985800DE86D0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1643CE332C5C985800DE86D0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1643CE352C5C985800DE86D0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1643CE3D2C5CF50C00DE86D0 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +73,7 @@
 			isa = PBXGroup;
 			children = (
 				1643CE2B2C5C985800DE86D0 /* ViewController.swift */,
+				1643CE3D2C5CF50C00DE86D0 /* Constants.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -157,6 +160,7 @@
 				1643CE2C2C5C985800DE86D0 /* ViewController.swift in Sources */,
 				1643CE282C5C985800DE86D0 /* AppDelegate.swift in Sources */,
 				1643CE2A2C5C985800DE86D0 /* SceneDelegate.swift in Sources */,
+				1643CE3E2C5CF50C00DE86D0 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -306,6 +310,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = NO;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -333,6 +338,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = NO;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;

@@ -22,7 +22,9 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         errorLabel.isHidden = true
-        // Do any additional setup after loading the view.
+        firstTextField.delegate = self
+        secondTextField.delegate = self
+
         
         // Add tap gesture recognizer to the view
                let tapGesture = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard))
@@ -64,28 +66,28 @@ class ViewController: UIViewController {
                     errorLabel.text = "Please Enter Second Number."
                 }  else {
                     
-                    if selectedOperations == "+" {
+                    if selectedOperations == K.addition {
                         let result = Double(firstTextFld)! + Double(secondTextFld)!
                         errorLabel.isHidden = true
                         answerLabel.text = String(format: "%.1f", result)
                         print("The addition value: \(result)")
                         //Addition
                     }
-                    else if selectedOperations == "-" {
+                    else if selectedOperations == K.subtraction{
                         let result =  Double(firstTextFld)! - Double(secondTextFld)!
                         errorLabel.isHidden = true
                         answerLabel.text = String(format: "%.1f", result)
                         print("The subtraction value: \(result)")
                         //Subtraction
                     }
-                    else if selectedOperations == "x" {
+                    else if selectedOperations == K.multiplication {
                         let result =  Double(firstTextFld)! * Double(secondTextFld)!
                         errorLabel.isHidden = true
                         answerLabel.text = String(format: "%.1f", result)
                         print("The multiplication value: \(result)")
                         //Multiplication
                     }
-                    else if selectedOperations == "/" {
+                    else if selectedOperations == K.division {
                         
                         // Check for division by zero
                         guard Double(secondTextFld) != 0 else {
@@ -111,6 +113,18 @@ class ViewController: UIViewController {
         
     }
     
+}
+
+extension ViewController: UITextFieldDelegate  {
+    
+    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+        let allowedCharacters = CharacterSet.decimalDigits
+        print("allowed characters: \(allowedCharacters)")
+        let characterSet = CharacterSet(charactersIn: string)
+        print("characterSet \(characterSet)")
+        return allowedCharacters.isSuperset(of: characterSet)
+        
+    }
 }
 
 
